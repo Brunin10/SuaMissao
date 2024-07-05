@@ -6,24 +6,37 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Pergunta 1",
+        enunciado: "A disseminação de fake news pode ter graves consequências para a sociedade,  propagação de boatos, aumento da polarização política e o enfraquecimento da confiança nas instituições e na mídia. Você tem ciência dessas consequências ao compartilhar informações?",
         alternativas [
-            "Alternativa1";
-            "Alternativa2"
+            "Não me preocupo com isso";
+            "Sim, com toda a certeza!"
         ]
     },
     {
-        enunciado: "Pergunta 2",
+        enunciado: "Como a desigualdade social afeta o acesso  a educação de qualidade?",
         alternativas [
-            "Alternativa1";
-            "Alternativa2"
+            "Faz com que pessoas com maior poder aquisitivo tenha uma educação de maior qualidade.";
+            "Ela não afeta a educação,  pois todos têm acesso aos mesmos recursos."
         ]
     },
     {
-        enunciado: "Pergunta 3",
+        enunciado: "Quais as causas das desigualdades sociais? A educação pode conscientizar sobre Fake News e Desigualdade Social?",
         alternativas [
-            "Alternativa1";
-            "Alternativa2"
+            "Distribuição de renda e baixa qualificação profissional. A educação pode ser a ferramenta para conscientizar a sociedade.";
+            "Falta de acessibilidade e utilização adequada da tecnologia para a qualificação profissional.
+A educação não interfere na conscientização da sociedade.
+"
         ]
-    },
-]
+    }
+];
+
+let pergAtual = 0;
+let pergAtual;
+
+function mostraPergunta() {
+    perguntaAtual = perguntas[pergAtual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+
+}
+
+mostraPergunta();
