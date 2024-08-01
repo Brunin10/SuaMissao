@@ -25,15 +25,19 @@ const perguntas = [
             "Distribuição de renda e baixa qualificação profissional. A educação pode ser a ferramenta para conscientizar a sociedade.";
             "Falta de acessibilidade e utilização adequada da tecnologia para a qualificação profissional.
 A educação não interfere na conscientização da sociedade.
-"
-        ]
+"    ]
     }
 ];
 
 let pergAtual = 0;
 let pergAtual;
 
-function mostraPergunta() {
+function mostraPergunta(){
+    for (const alternativa of pergAtual,alternativas){
+        const botaoAlternativas = document.createElement("button") ;
+        botaoAlternativas.textContent = alternativa ;
+        caixaAlternativas.appendChild(botaoAlternativas) ;
+    }
     perguntaAtual = perguntas[pergAtual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
 
