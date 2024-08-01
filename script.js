@@ -30,17 +30,21 @@ A educação não interfere na conscientização da sociedade.
 ];
 
 let pergAtual = 0;
-let pergAtual;
+let pergAtual ;
 
 function mostraPergunta(){
-    for (const alternativa of pergAtual,alternativas){
-        const botaoAlternativas = document.createElement("button") ;
-        botaoAlternativas.textContent = alternativa ;
-        caixaAlternativas.appendChild(botaoAlternativas) ;
-    }
     perguntaAtual = perguntas[pergAtual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "" ;
+    mostraAlternativas () ;
+};
 
-}
+mostraPergunta () ;
 
-mostraPergunta();
+    function mostraAlternativas(){
+        for (const alternativa of pergAtual,alternativas){
+            const botaoAlternativas = document.createElement("button") ;
+            botaoAlternativas.textContent = alternativa ;
+            caixaAlternativas.appendChild(botaoAlternativas) ;
+    }
+} ;
