@@ -44,10 +44,7 @@ const perguntas = [
             }
         ]
     },
-    {
-
-    }
-];
+] ;
 
 let pergAtual = 0;
 let pergAtual ;
@@ -65,6 +62,10 @@ mostraPergunta () ;
         for (const alternativa of pergAtual,alternativas){
             const botaoAlternativas = document.createElement("button") ;
             botaoAlternativas.textContent = alternativa.texto ;
+            botaoAlternativas.addEventListener("click", function(){
+                pergAtual++;
+            mostraPergunta();
+        });
             caixaAlternativas.appendChild(botaoAlternativas) ;
     }
 } ;
