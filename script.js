@@ -32,20 +32,20 @@ const perguntas = [
         ]
     },
     {
+        enunciado: "Quais as causas das desigualdades sociais? A educação pode conscientizar sobre Fake News e Desigualdade Social?"
+        alterntivas [
+            {
                 texto: "Distribuição de renda e baixa qualificação profissional. A educação pode ser a ferramenta para conscientizar a sociedade."
-                afirmacao: "O problema é  político, social e econômico com foco na  má distribuição de renda, consequentemente inoportunidades na  formação de qualificação, tanto profissional quanto pessoal."
+                afirmacao: "O problema é  político, social e econômico com foco na  má distribuição de renda, consequentemente inoportunidades na  formação de qualificação, tanto profissional quanto pessoal."  
             }
-            "Faz com que pessoas com maior poder aquisitivo tenha uma educação de maior qualidade.";
-            "Ela não afeta a educação, pois todos têm acesso aos mesmos recursos."
+            {
+                texto: "Falta de acessibilidade e utilização adequada da tecnologia para a qualificação profissional. A educação não interfere na conscientização da sociedade"
+                afirmacao: "Dificuldade em conciliar trabalho com estudo. As barreiras que ainda existem em relação ao acesso a conexão e equipamentos que permitam essa tal formação."
+            }
         ]
     },
     {
-        enunciado: "Quais as causas das desigualdades sociais? A educação pode conscientizar sobre Fake News e Desigualdade Social?",
-        alternativas [
-            "Distribuição de renda e baixa qualificação profissional. A educação pode ser a ferramenta para conscientizar a sociedade.";
-            "Falta de acessibilidade e utilização adequada da tecnologia para a qualificação profissional.
-A educação não interfere na conscientização da sociedade.
-"    ]
+
     }
 ];
 
@@ -64,7 +64,7 @@ mostraPergunta () ;
     function mostraAlternativas(){
         for (const alternativa of pergAtual,alternativas){
             const botaoAlternativas = document.createElement("button") ;
-            botaoAlternativas.textContent = alternativa ;
+            botaoAlternativas.textContent = alternativa.texto ;
             caixaAlternativas.appendChild(botaoAlternativas) ;
     }
 } ;
