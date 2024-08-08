@@ -8,8 +8,10 @@ const perguntas = [
     {
         enunciado: "A disseminação de fake news pode ter graves consequências para a sociedade,  propagação de boatos, aumento da polarização política e o enfraquecimento da confiança nas instituições e na mídia. Você tem ciência dessas consequências ao compartilhar informações?",
         alternativas [
-            "Não me preocupo com isso";
-            "Sim, com toda a certeza!"
+            {
+                texto: "Não me preocupo com isso";
+                afirmacao: "Acredito na liberdade de expressão, todos têm o direito de expor ideias: sejam verdadeiras ou não".
+            },
         ]
     },
     {
