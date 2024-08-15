@@ -48,6 +48,7 @@ const perguntas = [
 
 let pergAtual = 0;
 let perguntaAtual ;
+let historiaFinal = "" ;
 
 function mostraPergunta(){
     perguntaAtual = perguntas[pergAtual];
