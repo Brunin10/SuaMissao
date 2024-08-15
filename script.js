@@ -54,7 +54,8 @@ function mostraPergunta(){
     perguntaAtual = perguntas[pergAtual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = "" ;
-    mostraAlternativas () ;
+    caixaResultado.textContent    = "" ;
+    mostraAlternativas() ;
 };
 
 mostraPergunta () ;
