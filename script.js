@@ -63,10 +63,14 @@ mostraPergunta () ;
         for (const alternativa of perguntaAtual.alternativas){
             const botaoAlternativas = document.createElement("button") ;
             botaoAlternativas.textContent = alternativa.texto ;
-            botaoAlternativas.addEventListener("click", ()=>{
-                pergAtual++;
-            mostraPergunta();
-        });
+            botaoAlternativas.addEventListener("click", ()=> respostaSelecionada(alternativa)) ;
             caixaAlternativas.appendChild(botaoAlternativas) ;
     }
+} ;
+
+function opcaoSelecionada(){
+    const afirmacao = opcaoSelecionada.afirmacao ;
+    historiaFinal = afirmacao ;
+    pergAtual++ ;
+    mostraPergunta() ;
 } ;
