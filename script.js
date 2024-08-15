@@ -68,7 +68,7 @@ mostraPergunta () ;
     }
 } ;
 
-function opcaoSelecionada(){
+function respostaSelecionada (opcaoSelecionada){
     const afirmacao = opcaoSelecionada.afirmacao ;
     historiaFinal = afirmacao ;
     pergAtual++ ;
