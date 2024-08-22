@@ -54,7 +54,7 @@ function mostraPergunta(){
     perguntaAtual = perguntas[pergAtual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = "" ;
-    caixaResultado.textContent    = "" ;
+    textoResultado.textContent    = "" ;
     mostraAlternativas() ;
 };
 
@@ -71,7 +71,13 @@ mostraPergunta () ;
 
 function respostaSelecionada (opcaoSelecionada){
     const afirmacao = opcaoSelecionada.afirmacao ;
-    historiaFinal = afirmacao ;
+    historiaFinal += afirmacao + " " ;
     pergAtual++ ;
     mostraPergunta() ;
 } ;
+
+function mostraResultado (){
+    caixaPerguntas.textContent = "Em 2049..." ;
+    textoResultado.textContent = "historiaFinal" ;
+    caixaAlternativas.textContent = "" ;
+}
